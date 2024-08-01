@@ -1,0 +1,13 @@
+.modal-content {
+  background-color: #fff;
+}
+
+.modal-body #termsSnippet {
+  overflow: hidden;
+  max-height: 200px; /* Adjust height as needed */
+}
+
+.modal-body #fullTerms {
+  overflow: auto;
+  max-height: 400px; /* Adjust height as needed */
+}

@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+.app-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it's on top of other content */
+    background-color: white; /* Optional: Add a background color to prevent transparency */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+.container {
+    padding-top: 20px; /* Adjust this value to the height of your header */
+}

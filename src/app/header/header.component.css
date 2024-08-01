@@ -1,0 +1,24 @@
+.header {
+    align-items: center;
+    position: relative;
+    text-align: center;
+    margin: 0px;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) 
+  }
+  
+  .header h1 {
+    font-size: 2.5rem; /* Increase font size */
+    color: #333; /* Choose a suitable text color */
+    margin-bottom: 0; /* Remove default margin */
+    text-transform: uppercase; /* Optional: Convert text to uppercase */
+    font-family: 'Arial', sans-serif; /* Optional: Choose a suitable font family */
+    letter-spacing: 2px; /* Optional: Adjust letter spacing */
+  }
+  
+  .selected{
+    text-decoration: underline;
+  }
