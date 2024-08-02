@@ -1,24 +1,55 @@
 .header {
-    align-items: center;
-    position: relative;
-    text-align: center;
-    margin: 0px;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) 
-  }
+  align-items: center;
+  position: relative;
+  text-align: center;
+  margin: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #ffffff; /* Fallback color */
+  background-image: url('./../../assets/imagess/board.jpg'); /* Path to your image or use CSS gradient */
+  background-size: cover; /* Adjust size as needed */
+  background-position: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  font-size: 2.5rem; /* Increase font size */
+  color: #155e75; /* Matching color from previous responses */
+  margin: 0; /* Remove default margin */
+  text-transform: uppercase; /* Optional: Convert text to uppercase */
+  font-family: 'Arial', sans-serif; /* Optional: Choose a suitable font family */
+  letter-spacing: 2px; /* Optional: Adjust letter spacing */
+}
+
+.nav-button {
+  background: none; /* Remove default button background */
+  border: none;
+  font: bolder;
   
-  .header h1 {
-    font-size: 2.5rem; /* Increase font size */
-    color: #333; /* Choose a suitable text color */
-    margin-bottom: 0; /* Remove default margin */
-    text-transform: uppercase; /* Optional: Convert text to uppercase */
-    font-family: 'Arial', sans-serif; /* Optional: Choose a suitable font family */
-    letter-spacing: 2px; /* Optional: Adjust letter spacing */
-  }
+  color: #0f766e; /* Matching color from previous responses */
+  font-size: larger; /* Adjust font size as needed */
+  margin: 0 0.5rem; /* Adjust margin for navigation buttons */
+  padding: 0.5rem 0.5rem; /* Adjust padding for better button appearance */
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.1s ease, transform 0.3s ease;
+}
+
+.nav-button:hover {
+  color: white; /* Matching color from previous responses */
+  background-color: rgba(0, 0, 0, 0.8); /* Light background on hover */
+  transform: scale(1.05); /* Slight scaling effect */
+  border-radius: 4px;
+}
+
+.selected {
   
-  .selected{
-    text-decoration: underline;
-  }
+  color: #0f766e; /* Matching color from previous responses */
+}
+
+.logo:hover{
+  color: white; /* Matching color from previous responses */
+  background-color: rgba(0, 0, 0, 0); /* Light background on hover */
+  transform: scale(1.05); /* Slight scaling effect */
+  border-radius: 4px;
+}

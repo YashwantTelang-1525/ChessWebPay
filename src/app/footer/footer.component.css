@@ -1,0 +1,21 @@
+.footer-bg {
+  background-image: url('./../../assets/imagess/board.jpg'); /* Path to your image or use CSS gradient */
+  background-size: cover; /* Adjust size as needed */
+  background-position: center;
+  background-repeat: no-repeat; /* Prevent repeating of the background image */
+  padding: 2px; /* Adjust padding to fit your design */
+}
+
+.footer-bg h2 {
+  color: #155e75; /* Match color from previous responses */
+}
+
+.footer-bg .logo {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for the logo */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer-bg .logo:hover {
+  transform: scale(1.1); /* Slight scaling effect on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
