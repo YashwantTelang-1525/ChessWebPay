@@ -7,7 +7,7 @@
   width: 100%;
   z-index: 1000;
   background-color: #ffffff; /* Fallback color */
-  background-image: url('./../../assets/imagess/board.jpg'); /* Path to your image or use CSS gradient */
+   /* Path to your image or use CSS gradient */
   background-size: cover; /* Adjust size as needed */
   background-position: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
