@@ -45,11 +45,12 @@ export class TermsConditionsComponent implements AfterViewInit {
       modal.hide();
     }
     this.router.navigate(['/']);
+    this.router.navigate(['/fees']);
   }
 
   decline() {
     console.log('Terms declined');
-    const modalElement = document.getElementById('termsModal')
+    const modalElement = document.getElementById('termsModal');
     const modal = bootstrap.Modal.getInstance(modalElement);
     modal.hide();
     this.router.navigate(['/decline']);
