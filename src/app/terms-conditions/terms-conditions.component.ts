@@ -1,15 +1,17 @@
 import { Component, AfterViewInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 declare var bootstrap: any;
 
 @Component({
   selector: 'app-terms-conditions',
   standalone: true,
-  imports: [],
   templateUrl: './terms-conditions.component.html',
   styleUrls: ['./terms-conditions.component.css']
 })
 export class TermsConditionsComponent implements AfterViewInit {
+
+  constructor(private router: Router) {}
 
   ngAfterViewInit() {
     this.showModal();
@@ -35,20 +37,18 @@ export class TermsConditionsComponent implements AfterViewInit {
   }
 
   accept() {
-    // Handle accept action (e.g., set a cookie, store in local storage, etc.)
     console.log('Terms accepted');
-    // Hide the modal
+    localStorage.setItem('termsAccepted', 'true');
     const modalElement = document.getElementById('termsModal');
     if (modalElement) {
       const modal = bootstrap.Modal.getInstance(modalElement);
       modal.hide();
     }
+    this.router.navigate(['/']);
   }
 
   decline() {
-    // Handle decline action (e.g., redirect to another page, show a message, etc.)
     console.log('Terms declined');
-    // Redirect to another page
-    window.location.href = 'https://www.example.com';
+    this.router.navigate(['/decline']);
   }
 }
