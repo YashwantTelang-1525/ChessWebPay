@@ -45,7 +45,7 @@ export class TermsConditionsComponent implements AfterViewInit {
       modal.hide();
     }
     this.router.navigate(['/']);
-    this.router.navigate(['/fees']);
+    
   }
 
   decline() {
