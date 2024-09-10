@@ -8,6 +8,7 @@ import { ContactComponent } from './contact/contact.component';
 import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
 import { DeclineComponent } from './decline/decline.component';
 import { termsGuard } from './terms.gurad';
+import { ChessboardComponent } from './chessboard/chessboard.component';
 
 export const routes: Routes = [
   { path: '', component: CarouselComponent, canActivate: [termsGuard] },
@@ -16,7 +17,8 @@ export const routes: Routes = [
   { path: 'about', component: HeroComponent, canActivate: [termsGuard] },
   { path: 'contact', component: ContactComponent, canActivate: [termsGuard] },
   { path: 'terms', component: TermsConditionsComponent },
-  { path: 'decline', component: DeclineComponent }
+  { path: 'decline', component: DeclineComponent },
+  { path: 'chessboard', component: ChessboardComponent}
 ];
 
 export const AppRoutingModule = RouterModule.forRoot(routes);

@@ -11,14 +11,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FeesStructureComponent } from './fees-structure/fees-structure.component';
 import { EmailfunctionComponent } from './emailfunction/emailfunction.component';
 import { TermsConditionsComponent } from "./terms-conditions/terms-conditions.component";
-
+import { ChessboardComponent } from './chessboard/chessboard.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, HeaderComponent, BlogComponent, CarouselComponent,
     HeroComponent, HeaderComponent, RouterModule, ContactComponent, FooterComponent, ReactiveFormsModule,
-    FeesStructureComponent, EmailfunctionComponent, TermsConditionsComponent],
+    FeesStructureComponent, EmailfunctionComponent, TermsConditionsComponent, ChessboardComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

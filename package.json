@@ -21,12 +21,11 @@
     "@angular/platform-browser-dynamic": "^17.3.0",
     "@angular/platform-server": "^17.3.0",
     "@angular/router": "^17.3.0",
-    
     "@emailjs/browser": "^4.3.3",
     "@stripe/stripe-js": "^4.1.0",
     "@types/stripe-v3": "^3.1.33",
     "bootstrap": "^5.3.3",
-    
+    "chess.js": "^1.0.0-beta.8",
     "ngx-mail-sender": "^1.1.0",
     "rxjs": "~7.8.0",
     "stripe-angular": "^1.9.3",

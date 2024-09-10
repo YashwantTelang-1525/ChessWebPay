@@ -1,0 +1,32 @@
+<h4 style="color: red; text-align: center;">development under process...</h4><br>
+<div class="chessboard-container">
+    
+    <div class="chessboard">
+      <div *ngFor="let row of board; let i = index" class="board-row">
+        <div *ngFor="let square of row; let j = index" 
+             class="square" 
+             
+             (drop)="handleDrop($event, i, j)" 
+             (dragover)="allowDrop($event)"
+             (dragenter)="handleDragEnter($event)">
+          <span *ngIf="square" 
+                [attr.draggable]="true" 
+                (dragstart)="handleDragStart($event, i, j)">
+            {{ getPieceUnicode(square) }}
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="controls">
+      <button (click)="resetGame()">Reset Board</button>
+      <button (click)="flipBoard()">Flip Board</button>
+      <button (click)="undoMove()">Undo Move</button>
+    </div>
+    <div class="notation">
+      <h3>Move Notation</h3>
+      <ul>
+        <li *ngFor="let move of notation">{{ move }}</li>
+      </ul>
+    </div>
+  </div>
+  

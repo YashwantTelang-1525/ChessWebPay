@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class HeroComponent {
 
+  
   constructor(private router: Router) { }
 
   navigateToFirstComponent() {

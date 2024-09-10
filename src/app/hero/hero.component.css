@@ -1,3 +1,4 @@
+/* Existing Styles */
 .text-gray-600.body-font {
     background-color: white;
     padding: 20px;
@@ -9,33 +10,139 @@
 }
 
 .trainer-details img {
-    width: 100px; /* Adjust as needed */
-    height: 100px; /* Adjust as needed */
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     margin-bottom: 10px;
 }
 
-.trainer-details h2 {
-    margin-top: 0;
+.carousel {
+    display: flex;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+   
+    height: auto;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    
 }
 
+.carousel-item {
+    flex: 0 0 100%;
+    background-color: cadetblue;
+    scroll-snap-align: center;
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.3s ease-in-out;
+  
+    border-radius: 5px;
+}
+
+.carousel-item:hover {
+    transform: scale(1.1);
+}
+
+.logo {
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%; /* Make the buttons smaller */
+    opacity: 1; /* Ensure the buttons are fully visible */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Add a background color to make them stand out */
+    border-radius: 50%; /* Make the arrows round */
+    padding: 10px;
+}
+
+
+
+/* Carousel for Testimonials */
+#studentTestimonialsCarousel .carousel-item {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.3s ease-in-out;
+    border: none;
+    justify-content: center;
+}
+
+#studentTestimonialsCarousel .carousel-item:hover {
+    transform: scale(1.05);
+}
+
+#studentTestimonialsCarousel .card-body {
+    padding: 2rem;
+    
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+#studentTestimonialsCarousel .card-text {
+    font-size: 1.1rem;
+    color: #555;
+    flex-grow: 1; /* Ensures the text fills available space */
+}
+
+#studentTestimonialsCarousel .card-title {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Media Queries */
 @media (max-width: 1024px) {
     .container {
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
     
     .trainer-details, .text-left {
         width: 100%;
         margin-right: 0;
     }
+
+    #studentTestimonialsCarousel .carousel-item {
+        flex: 0 0 100%;
+    }
 }
 
-.logo {
-   
-    transition: transform 0.3s ease-in-out;
-  }
 
-  .logo:hover {
-    transform: scale(1.1);
-  }
+/* About Us Carousel Controls */
+.aboutUs-prev, .aboutUs-next {
+    width: 5%; 
+    opacity: 0.8; /* Different opacity for About Us section */
+}
+
+.aboutUs-prev .carousel-control-prev-icon,
+.aboutUs-next .carousel-control-next-icon {
+    background-color: rgba(0, 0, 128, 0.5); /* Navy background */
+    border-radius: 50%;
+    padding: 10px;
+}
+
+/* Students Carousel Controls */
+.students-prev, .students-next {
+    width: 7%; 
+    opacity: 1; /* Full opacity for Student Testimonials section */
+}
+
+.students-prev .carousel-control-prev-icon,
+.students-next .carousel-control-next-icon {
+    background-color: rgba(0, 128, 0, 0.5); /* Green background */
+    border-radius: 50%;
+    padding: 12px;
+}

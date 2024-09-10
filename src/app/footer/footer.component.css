@@ -1,9 +1,27 @@
+/* Ensure the body and html take up the full height of the viewport */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Flexbox styles to make the footer stick to the bottom */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the body is at least the height of the viewport */
+}
+
+footer {
+  margin-top: auto; /* Push the footer to the bottom of the page */
+}
+
+/* Footer background and logo styling */
 .footer-bg {
-  /* Path to your image or use CSS gradient */
-  background-size: cover; /* Adjust size as needed */
+  background-size: cover;
   background-position: center;
-  background-repeat: no-repeat; /* Prevent repeating of the background image */
-  padding: 2px; /* Adjust padding to fit your design */
+  background-repeat: no-repeat;
+  padding: 2px;
 }
 
 .footer-bg h2 {
