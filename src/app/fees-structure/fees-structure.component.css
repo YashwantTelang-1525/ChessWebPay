@@ -1,3 +1,12 @@
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 .fade-in {
   opacity: 0;
   animation: fadeInAnimation 0.5s ease forwards;
@@ -12,16 +21,4 @@
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-.card {
-  border: 12px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 100%; /* Set a fixed height for the cards */
 }

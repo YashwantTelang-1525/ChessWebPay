@@ -3,18 +3,18 @@
     
     <div class="chessboard">
       <div *ngFor="let row of board; let i = index" class="board-row">
-        <div *ngFor="let square of row; let j = index" 
-             class="square" 
-             
-             (drop)="handleDrop($event, i, j)" 
-             (dragover)="allowDrop($event)"
-             (dragenter)="handleDragEnter($event)">
-          <span *ngIf="square" 
-                [attr.draggable]="true" 
-                (dragstart)="handleDragStart($event, i, j)">
-            {{ getPieceUnicode(square) }}
-          </span>
-        </div>
+        <div *ngFor="let square of row; let j = index"
+          class="square"
+          [ngClass]="{'white-piece': square.toUpperCase() === square, 'black-piece': square.toLowerCase() === square}"
+          (drop)="handleDrop($event, i, j)"
+          (dragover)="allowDrop($event)"
+          (dragenter)="handleDragEnter($event)">
+        <span *ngIf="square"
+              [attr.draggable]="true"
+              (dragstart)="handleDragStart($event, i, j)">
+          {{ getPieceUnicode(square) }}
+        </span>
+    </div>
       </div>
     </div>
     <div class="controls">
@@ -24,9 +24,23 @@
     </div>
     <div class="notation">
       <h3>Move Notation</h3>
-      <ul>
-        <li *ngFor="let move of notation">{{ move }}</li>
-      </ul>
+      <table>
+        <thead>
+          <tr>
+            <th>Move</th>
+            <th>White</th>
+            <th>Black</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let move of getFormattedNotation(); let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ move.white }}</td>
+            <td>{{ move.black }}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+    
   </div>
   

@@ -108,17 +108,34 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        margin: 0; /* Remove margins to use full width */
+        padding: 0; /* Remove padding if necessary */
     }
     
     .trainer-details, .text-left {
-        width: 100%;
-        margin-right: 0;
+        width: 100%; /* Ensure full width usage */
+        margin: 0; /* Remove margins for full width usage */
+        padding: 10px; /* Add padding for better spacing */
     }
 
     #studentTestimonialsCarousel .carousel-item {
-        flex: 0 0 100%;
+        flex: 0 0 100%; /* Ensure items take full width */
+        margin: auto; /* Center items horizontally */
+        padding: 10px; /* Adjust padding as needed */
+    }
+
+    /* Additional adjustments for very small screens (phones) */
+    @media (max-width: 480px) {
+        .trainer-details, .text-left {
+            padding: 5px; /* Reduce padding for very small screens */
+        }
+
+        #studentTestimonialsCarousel .carousel-item {
+            padding: 5px; /* Reduce padding for very small screens */
+        }
     }
 }
+
 
 
 /* About Us Carousel Controls */
@@ -146,3 +163,4 @@
     border-radius: 50%;
     padding: 12px;
 }
+

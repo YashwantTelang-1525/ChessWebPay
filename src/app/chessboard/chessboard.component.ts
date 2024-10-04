@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Chess } from 'chess.js';
 import { CommonModule } from '@angular/common';
 
+
 @Component({
   selector: 'app-chessboard',
   standalone: true,
@@ -30,6 +31,7 @@ export class ChessboardComponent implements OnInit {
     };
     return unicodePieces[piece] || '';
   }
+//^  
 
   handleDrop(event: DragEvent, i: number, j: number): void {
     event.preventDefault();
@@ -81,5 +83,18 @@ export class ChessboardComponent implements OnInit {
       this.notation.pop();
       this.updateBoard();
     }
+  }
+
+  getFormattedNotation() {
+    const formattedNotation: { white: string, black: string }[] = [];
+  
+    for (let i = 0; i < this.notation.length; i += 2) {
+      formattedNotation.push({
+        white: this.notation[i],
+        black: this.notation[i + 1] || ''  // Handle cases where black hasn't moved yet
+      });
+    }
+  
+    return formattedNotation;
   }
 }

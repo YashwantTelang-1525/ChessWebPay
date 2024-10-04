@@ -28,6 +28,14 @@
   background-color: #eeeed2;
   }
   
+  .square.white-piece {
+    color: #ffffff; /* White pieces color */
+  }
+  
+  .square.black-piece {
+    color: #000000; /* Black pieces color */
+  }
+
   .square:nth-child(even) {
     background-color: #769656;
   }
@@ -83,4 +91,19 @@
   .square.dragging {
     opacity: 0.8;
     z-index: 10;
+  }
+
+  .notation table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .notation th, .notation td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  .notation th {
+    background-color: #f2f2f2;
   }

@@ -13,6 +13,7 @@ import { EmailfunctionComponent } from './emailfunction/emailfunction.component'
 import { TermsConditionsComponent } from "./terms-conditions/terms-conditions.component";
 import { ChessboardComponent } from './chessboard/chessboard.component';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
